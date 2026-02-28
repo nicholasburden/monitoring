@@ -1,0 +1,20 @@
+# Environment variables
+.env
+.env.*
+
+# Docker volumes
+data/
+volumes/
+
+# Grafana
+grafana/data/
+
+# Prometheus
+prometheus/data/
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
