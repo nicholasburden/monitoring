@@ -26,3 +26,8 @@ scrape_configs:
   - job_name: "pub-quiz"
     static_configs:
       - targets: ["192.168.50.41:5000"]
+
+  - job_name: "heating"
+    static_configs:
+      # Scraped over the shared caddy_shared network by container name.
+      - targets: ["heating:8000"]
