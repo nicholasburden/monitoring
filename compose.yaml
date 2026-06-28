@@ -37,6 +37,9 @@ services:
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
+    # Container has its own UTS namespace, so uname(2) -> node_uname_info would
+    # otherwise report the container id. Pin it to the real host name.
+    hostname: servy
     volumes:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
